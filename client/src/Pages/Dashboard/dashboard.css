@@ -1,0 +1,61 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.trip-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width:70%;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.create-new-trip {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.trip-preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.notes {
+    background-color: white;
+}
+
+.trip-destination {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-start;
+}
+  
+.trip-date {
+    flex: 1; 
+}
+
+.buttons {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.edit-button {
+    background-color: green;
+    border-color: green;
+}
+
+.delete-button {
+    background-color: red;
+    border-color: red;
+}

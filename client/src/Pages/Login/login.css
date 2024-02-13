@@ -1,0 +1,35 @@
+/* login.css */
+
+.login {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+  
+.login-form {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    position: absolute;
+    top: 10%;
+}
+  
+  
+.form-group {
+    margin-bottom: 20px;
+}
+  
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+
+.register-here {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 400;
+}
