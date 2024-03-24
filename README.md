@@ -25,6 +25,3 @@ cd server
 npm install
 node index.js
 ```
-
-## Not Completed Yet
-programs runs perfectly fine, but needs some clean up.
