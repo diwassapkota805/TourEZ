@@ -81,19 +81,20 @@ const Dashboard = () => {
                         <Accordion.Header>
                             <div className="trip-preview">
                                 <div className="trip-destination"><p>{trip.destination}</p></div>
-                                <div className="trip-date"><p>{trip.startDate} to {trip.endDate}</p></div>
+
+                                <p>{new Date(trip.startDate).getMonth() + 1}/{new Date(trip.startDate).getDate()}/{new Date(trip.startDate).getFullYear()} to {new Date(trip.endDate).getMonth() + 1}/{new Date(trip.endDate).getDate()}/{new Date(trip.endDate).getFullYear()}</p>
+
                                 <div className="buttons">
                                     <Link to={`/editTrip/${trip._id}`}><button className="edit-button">Edit Trip</button></Link>
-
                                     <button className="delete-button" onClick={() => handleDelete(trip._id)}>Delete</button>
                                 </div>
                             </div>
                         </Accordion.Header>
                         <Accordion.Body>
                             <div className="notes">
-                                <p>{trip.note}</p>
-                                <p>{trip.budget}</p>
-
+                                <p>Number of Travelers: {trip.numberOfTravelers}</p>
+                                <p>Budget: {trip.budget}</p>
+                                <p>Note: {trip.notes}</p>
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
