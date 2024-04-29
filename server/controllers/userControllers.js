@@ -2,22 +2,25 @@ const asyncHandler = require('express-async-handler');
 const User = require('../models/userModel');
 const generateToken = require('../utils/generateTokens');
 
+// Register a new user
 const registerUser = asyncHandler(async (req, res) => {
     const { name, email, password } = req.body;
 
+    // Check if user already exists
     const userExists = await User.findOne({ email });
-
     if (userExists) {
         res.status(400);
         throw new Error("User already exists");
     }
 
+    // Create new user
     const user = await User.create({
         name,
         email,
         password
     });
 
+    // If user creation is successful, send response with user details and token
     if (user) {
         res.status(201).json({
             _id: user._id,
@@ -32,13 +35,15 @@ const registerUser = asyncHandler(async (req, res) => {
     }
 });
 
+// Authenticate user
 const authUser = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
-    console.log("I have received the request");
+
+    // Find user by email
     const user = await User.findOne({ email });
 
-
-    if (user && (await user.matchPassword(password))) { // if user exists and password matches
+    // If user exists and password matches, send response with user details and token
+    if (user && (await user.matchPassword(password))) {
         res.json({
             _id: user._id,
             name: user.name,
@@ -46,8 +51,8 @@ const authUser = asyncHandler(async (req, res) => {
             isAdmin: user.isAdmin,
             token: generateToken(user._id), // generate token
         });
-        console.log("Password matches");
     } else {
+        // If user doesn't exist or password doesn't match, send error response
         res.status(401);
         throw new Error("Invalid email or password");
     }

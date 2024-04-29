@@ -5,13 +5,6 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
     const navigate = useNavigate();
 
-    // useState(() => {
-    //     const userInfo = localStorage.getItem('userInfo');
-    //     if (userInfo) {
-    //         history.push("/dashboard");
-    //     }
-    // }, [history]);
-
     const handleGetStarted = () => {
         console.log("Get started button clicked");
         navigate('/tripInputForm');

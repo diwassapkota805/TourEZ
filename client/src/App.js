@@ -9,10 +9,14 @@ import EditTrip from './Pages/TripInputForm/editTrip';
 import Login from './Pages/Login/login';
 import Register from './Pages/Register/register';
 
+// Create a context for managing user authentication state
 export const Context = React.createContext();
 
 function App() {
+  // State for tracking user authentication status
   const [loggedIn, setLoggedIn] = React.useState(false);
+
+  // Render the application
   return (
     <Context.Provider value={[loggedIn, setLoggedIn]}>
       <Router>

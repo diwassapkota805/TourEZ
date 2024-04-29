@@ -36,8 +36,8 @@ const EditTrip = () => {
         }
     };
 
+    // Fetch trip details when the component mounts
     useEffect(() => {
-        // Fetch trip details when the component mounts
         fetchTripDetails();
     }, [id]);
 
@@ -76,10 +76,6 @@ const EditTrip = () => {
         catch (error) {
             console.log('Error updating trip: ', error)
         }
-        // Handle your form submission logic here
-        // You can send a request to update the trip details on the server
-        // For example, using axios or fetch
-        // After successful submission, you can set setIsSubmited(true)
     };
 
     return (

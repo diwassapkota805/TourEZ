@@ -12,9 +12,6 @@ dotenv.config();
 connectDB();
 app.use(express.json());
 
-// serve static files from the React app
-app.use(express.static(path.join(__dirname, '../client/build')));
-
 // middleware
 app.get('/', (req, res) => {
     res.send("API is running....");

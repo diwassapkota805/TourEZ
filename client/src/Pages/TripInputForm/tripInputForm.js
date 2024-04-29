@@ -71,10 +71,6 @@ const TripInputForm = () => {
         reset();
     }
 
-
-
-
-
     return (
         <div>
             <form className="trip-form" action="" onSubmit={handleSubmit(onSubmit)}>
@@ -104,11 +100,6 @@ const TripInputForm = () => {
                     <input type="number" placeholder="3" {...register("numberOfTravelers")} />
                 </div>
 
-                {/* <div className="form-group">
-                    <label htmlFor="notes">Notes:</label>
-                    <textarea name="notes" id="notes" cols="30" rows="10" placeholder="Enter notes here..."></textarea>
-                </div> */}
-
                 <div className="form-group">
                     <label htmlFor="notes">Notes:</label>
                     <textarea name="notes" id="notes" cols="30" rows="10" placeholder="Enter notes here..." {...register("notes")}></textarea>
@@ -122,7 +113,6 @@ const TripInputForm = () => {
 
             </form>
         </div>
-
     )
 }
 
