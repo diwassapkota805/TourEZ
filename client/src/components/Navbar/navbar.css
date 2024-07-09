@@ -5,14 +5,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-    /* overflow: hidden; */
+    padding: 0 20rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-bar {
+        padding: 0 10rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        padding: 0 5rem;
+    }
 }
 
 .logo-container img {
     width: 100px;
     height: 100px;
     object-fit: contain;
+    cursor: pointer;
 }
 
 .auth-buttons {
@@ -24,9 +36,7 @@
 .my-trips {
     font-size: large;
     font-weight: 400;
-    /* put it next to the buttons */
     margin-left: auto;
     margin-right: 30px;
     cursor: pointer;
-
 }
