@@ -38,7 +38,7 @@ const TripInputForm = () => {
                 },
             }
             // send data to backend
-            const response = await axios.post('/api/trips/create', {
+            const response = await axios.post('https://tourez-backend.onrender.com/api/trips/create', {
                 destination: data.destination,
                 startDate: data.startDate,
                 endDate: data.endDate,
