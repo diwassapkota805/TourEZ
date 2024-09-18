@@ -24,7 +24,7 @@ const Login = ({ history }) => {
             }
 
             // Send email and password to backend
-            const { data } = await axios.post("/api/users/login", { email, password }, config);
+            const { data } = await axios.post("https://tourez-backend.onrender.com/api/users/login", { email, password }, config);
             localStorage.setItem('userInfo', JSON.stringify(data));
 
             // Set loggedIn to true and navigate to dashboard
