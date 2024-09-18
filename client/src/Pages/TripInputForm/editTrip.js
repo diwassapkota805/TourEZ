@@ -19,7 +19,7 @@ const EditTrip = () => {
     // Assume you have a function to fetch trip details by ID from your API
     const fetchTripDetails = async () => {
         try {
-            const response = await fetch(`/api/trips/${id}`);
+            const response = await fetch(`https://tourez-backend.onrender.com/api/trips/${id}`);
             const tripData = await response.json();
 
             // Update state with the fetched data
@@ -53,7 +53,7 @@ const EditTrip = () => {
                 },
             };
             // send data to backend
-            const response = await axios.put(`/api/trips/${id}`, {
+            const response = await axios.put(`https://tourez-backend.onrender.com/api/trips/${id}`, {
                 id,
                 destination,
                 startDate,
