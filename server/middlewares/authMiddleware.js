@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 const asyncHandler = require('express-async-handler');
+require('dotenv').config(); 
 
 
 // Middleware function to protect routes requiring authentication

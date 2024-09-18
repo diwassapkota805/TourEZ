@@ -51,7 +51,7 @@ const Register = () => {
                 const { data } = await axios.post("/api/users", { name, email, password }, config);
 
                 localStorage.setItem('userInfo', JSON.stringify(data));
-                navigate('/dashboard');
+                navigate('/login');
 
             } catch (error) {
                 setError(error.response.data.message);

@@ -68,7 +68,7 @@ const EditTrip = () => {
             if (response.status === 200) {
                 setIsSubmited(true);
                 console.log("Trip has been updated!");
-                // handle any further actions after successful submission
+                navigate(`/dashboard`)
             } else {
                 console.error('Error updating trip: ', response.statusText)
             }

@@ -15,7 +15,9 @@ const Navbar = () => {
     };
 
     const navigateToHome = () => {
-        navigate('/');
+        if (! loggedIn) {
+            navigate('/');
+        }
     };
 
     const handleLogout = () => {
