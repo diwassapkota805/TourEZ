@@ -14,7 +14,7 @@ const Home = () => {
             <div className="home-top">
                 <div className="home-left">
                     <h1 className="home-title">TourEZ</h1>
-                    <h2 className="home-subtitle">Your Next Journey, Optimized</h2>
+                    <h3 className="home-subtitle">Your Next Journey, Optimized</h3>
                     <p className="home-description">Embark on seamless travel experience with TourEZ, your go-to web application for effortless trip plannign. Craft personalized itineaires, explore exciting destinations, and make every journey memorable. Start your adventure with TourEZ today!</p>
                     <button className="form-button" onClick={handleGetStarted}>Get Started</button>
                 </div>
