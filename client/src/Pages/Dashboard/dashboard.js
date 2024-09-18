@@ -26,7 +26,7 @@ const Dashboard = () => {
             };
 
             try {
-                const response = await axios.delete(`/api/trips/${tripId}`, config);
+                const response = await axios.delete(`https://tourez-backend.onrender.com/api/trips/${tripId}`, config);
 
                 if (response.status === 200) {
                     console.log("Trip has been deleted!");
@@ -51,7 +51,7 @@ const Dashboard = () => {
             console.log("Logged in, fetching trips...");
             const token = JSON.parse(localStorage.getItem('userInfo')).token;
             console.log("User Info:", token);
-            const response = await axios.get(`/api/trips`, {
+            const response = await axios.get(`https://tourez-backend.onrender.com/api/trips`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 }
