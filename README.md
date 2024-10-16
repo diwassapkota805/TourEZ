@@ -1,4 +1,4 @@
-# TourEZ
+# TourEZ (https://tourez.onrender.com/)
 
 TourEZ is a Full stack web applicatin built using MERN stack. It is designed to help user track their trips.
 
